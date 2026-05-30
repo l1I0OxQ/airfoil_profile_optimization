@@ -2,10 +2,6 @@
 
 **Multi-objective airfoil optimization with Bayesian search and RANS CFD — find the best lift-to-drag ratio across multiple angles of attack.**
 
-<p align="center">
-  <img src="logs/figs/trial_0000.png" alt="Example trial visualization" width="600">
-</p>
-
 ## What It Does
 
 Design a better wing. This tool uses **CST parameterization** to describe airfoil shapes, **Optuna's TPE sampler** to intelligently explore the design space, and **OpenFOAM RANS (simpleFoam)** to evaluate each candidate with CFD. The result: a **Pareto front** of optimal airfoils maximizing L/D at each angle of attack you care about.
