@@ -1,0 +1,22 @@
+{
+  "chord": 1.0,
+  "n": 3,
+  "n1": 0.5,
+  "n2": 1.0,
+  "min_cst_coeff": 0.03,
+  "max_cst_coeff": 0.15,
+  "num_points": 80,
+  "farfield_radius": 5.0,
+  "bl_layers": 15,
+  "bl_ratio": 1.2,
+  "bl_first_height": 3e-4,
+  "bl_recombine": true,
+  "wall_mesh_size": 0.002,
+  "objectives": ["ld"],
+  "n_trials": 20,
+  "aoas": [2.0, 4.0],
+  "uinf": 30.0,
+  "block": 4,
+  "use_parallel_solver": true,
+  "solver_env_path": "~/OpenFoam-v2206/OpenFOAM-v2206/etc/bashrc"
+}

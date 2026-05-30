@@ -1,0 +1,9 @@
+#!/bin/sh
+cd "${0%/*}" || exit
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions
+
+runApplication gmshToFoam airfoil.msh
+runApplication checkMesh
+runApplication changeDictionary
+restore0Dir
+runApplication $(getApplication)

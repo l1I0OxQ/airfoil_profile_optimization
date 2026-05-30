@@ -1,0 +1,47 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+#include        "../constant/keyParameters"
+application     simpleFoam;
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         $endTime;
+deltaT          1;
+writeControl    timeStep;
+writeInterval   $writeInterval;
+purgeWrite      0;
+writeFormat     ascii;
+writePrecision  10;
+writeCompression off;
+timeFormat      general;
+timePrecision   10;
+runTimeModifiable true;
+functions
+{
+    forceCoeffs1
+    {
+        type            forceCoeffs;
+        libs            (forces);
+        writeControl    writeTime;
+        writeFields     false;
+        patches         (airfoil);
+        p               p;
+        U               U;
+        rho             rhoInf;
+        log             true;
+        rhoInf          $rhoInf;
+        liftDir         $yaw;
+        dragDir         $roll;
+        CofR            $CoM;
+        pitchAxis       $pitch;
+        magUInf         $Ufar;
+        lRef            $Lref;
+        Aref            $Aref;
+        porosity        off;
+    }
+}

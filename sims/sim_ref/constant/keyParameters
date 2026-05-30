@@ -1,0 +1,15 @@
+Ufar            30;
+alpha           0;
+beta            0;
+CoM             (0.5 0 0);
+Lref            1;
+Aref            1;
+rhoInf          1.225;
+nu              1.5e-5;
+roll            (1 0 0);
+pitch           (0 0 -1);
+yaw             (0 1 0);
+nuTildaInf      4.5e-5;
+block           4;
+endTime         500;
+writeInterval   500;

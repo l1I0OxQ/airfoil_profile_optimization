@@ -1,0 +1,39 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+#include        "../constant/keyParameters"
+freeVel        #eval "vector($Ufar*cos($beta*pi()/180)*cos($alpha*pi()/180), $Ufar*cos($beta*pi()/180)*sin($alpha*pi()/180), $Ufar*sin($beta*pi()/180))";
+dimensions      [0 1 -1 0 0 0 0];
+internalField  uniform $freeVel;
+boundaryField
+{
+    airfoil
+    {
+        type            noSlip;
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           $internalField;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    top
+    {
+        type            slip;
+    }
+    bottom
+    {
+        type            slip;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+}

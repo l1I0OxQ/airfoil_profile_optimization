@@ -1,0 +1,11 @@
+config.json
+statistics.py
+logs/
+sims/simulations/
+sims/airfoil.msh
+sims/airfoil.stp
+solution/
+**/__pycache__/
+.cursor/
+.claude/
+.venv/

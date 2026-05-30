@@ -1,0 +1,9 @@
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      decomposeParDict;
+}
+#include        "../constant/keyParameters"
+numberOfSubdomains $block;
+method          scotch;

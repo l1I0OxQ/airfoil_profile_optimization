@@ -1,0 +1,21 @@
+[project]
+name = "airfoil-profile-optimization"
+version = "0.1.0"
+description = "2D airfoil multi-objective optimization with Optuna"
+requires-python = ">=3.11,<3.12"
+readme = "README.md"
+dependencies = [
+    "cadquery>=2.7.0",
+    "gmsh>=4.15",
+    "matplotlib>=3.10",
+    "numpy>=2.0",
+    "optuna>=4.8",
+    "pandas>=3.0",
+    "PyFoam>=2023.7",
+    "pyqtdarktheme>=2.1.0",
+    "PySide6>=6.11",
+    "scipy>=1.17",
+]
+
+[tool.uv]
+package = false
