@@ -90,7 +90,7 @@ class SortControl(QWidget):
         layout.addWidget(self.dir_btn)
         layout.addStretch()
 
-        self.combo.currentIndexChanged.connect(self.changed.emit)
+        self.combo.currentIndexChanged.connect(lambda: self.changed.emit())
         self.dir_btn.clicked.connect(self._toggle_dir)
 
     def _toggle_dir(self):
