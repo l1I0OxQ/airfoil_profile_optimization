@@ -18,5 +18,5 @@
   "uinf": 30.0,
   "block": 4,
   "use_parallel_solver": true,
-  "solver_env_path": "~/OpenFoam-v2206/OpenFOAM-v2206/etc/bashrc"
+  "solver_env_path": "~/OpenFOAM/OpenFOAM-v2206/etc/bashrc"
 }

@@ -1,3 +1,4 @@
+import os
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -99,8 +100,11 @@ def visualize_results(
 
     plt.subplots_adjust(left=0.08, right=0.95, top=0.95, bottom=0.05, hspace=0.35)
     filename = f"trial_{trial_index:04d}.png" if trial_index is not None else "trial_latest.png"
-    plt.savefig(str(figs_dir / filename), dpi=150, bbox_inches="tight")
+    final_path = figs_dir / filename
+    tmp_path = figs_dir / (filename + ".tmp")
+    plt.savefig(str(tmp_path), dpi=150, bbox_inches="tight")
     plt.close(fig)
+    os.replace(str(tmp_path), str(final_path))
 
 
 if __name__ == "__main__":

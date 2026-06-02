@@ -274,7 +274,7 @@ class VisualizationPanel(QGroupBox):
             self.figure.subplots_adjust(left=0, right=1, top=0.97, bottom=0)
             self.canvas.draw_idle()
             self.status.setText(f"{self.current_idx + 1}/{len(self.image_files)} {image_path.name}")
-        except (OSError, ValueError) as exc:
+        except (OSError, ValueError, SyntaxError) as exc:
             self.info.emit(f"Figure load failed: {exc}")
 
     def show_prev(self):
