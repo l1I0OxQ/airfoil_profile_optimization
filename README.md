@@ -1,3 +1,5 @@
+[English](README.md) | [中文](README.cn.md)
+
 # ✈️ Airfoil Profile Optimization
 
 **Multi-objective airfoil optimization with Bayesian search and RANS CFD — find the best lift-to-drag ratio across multiple angles of attack.**
